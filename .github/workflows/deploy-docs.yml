@@ -26,7 +26,7 @@ jobs:
 
       # https://github.com/storybookjs/storybook-deployer#:~:text=storybook%20%2D%2D%20%2D%2Dout%3D.out-,Skip%20Build%20Step,-If%20you%20have
       # https://github.com/storybookjs/storybook-deployer#:~:text=Deploying%20Storybook%20to%20GitHub%20Pages%20as%20part%20of%20a%20GitHub%20Action
-      - Run deploy
+      - name: Run deploy
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
