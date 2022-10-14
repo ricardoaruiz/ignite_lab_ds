@@ -1,0 +1,5 @@
+var d=Object.defineProperty;var a=(e,s)=>d(e,"name",{value:s,configurable:!0});import{R as m}from"./index.2c0dfc32.js";import{$ as i,c as p}from"./clsx.m.66ecaf6a.js";import{j as u}from"./jsx-runtime.d0b8776f.js";const x={sm:"text-xs",md:"text-sm",lg:"text-md"},t=a(({children:e,size:s="md",asChild:n,className:o})=>{const l=n?i:"span",c=`
+    text-gray-100
+    font-sans
+  `,r=m.useMemo(()=>x[s],[s]);return u(l,{className:p(c,r,o),children:e})},"Text");try{t.displayName="Text",t.__docgenInfo={description:"",displayName:"Text",props:{size:{defaultValue:{value:"md"},description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"sm"'},{value:'"md"'},{value:'"lg"'}]}},asChild:{defaultValue:null,description:"",name:"asChild",required:!1,type:{name:"boolean"}},className:{defaultValue:null,description:"",name:"className",required:!1,type:{name:"string"}}}},typeof STORYBOOK_REACT_CLASSES<"u"&&(STORYBOOK_REACT_CLASSES["src/components/Text/index.tsx#Text"]={docgenInfo:t.__docgenInfo,name:"Text",path:"src/components/Text/index.tsx#Text"})}catch{}export{t as T};
+//# sourceMappingURL=index.a0b6918d.js.map
