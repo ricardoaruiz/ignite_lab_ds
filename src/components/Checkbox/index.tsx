@@ -6,19 +6,22 @@ import { useId } from 'react';
 import { Text } from '../Text';
 
 export type CheckboxProps = CheckboxPropsPrimitive & {
-  label?: string
+  label?: string;
+  className?: string;
 }
 
-export const Checkbox = ({ label, id, ...props }: CheckboxProps) => {
+export const Checkbox = ({ label, id, className, ...props }: CheckboxProps) => {
   const internalId = id || useId()
 
   return (
-    <div className={`
+    <div className={clsx(`
       flex 
       items-center 
       gap-2 
       rounded 
-    `}
+    `,
+      className
+    )}
     >
       <CheckboxPrimitive.Root
         id={internalId}
@@ -58,7 +61,7 @@ export const Checkbox = ({ label, id, ...props }: CheckboxProps) => {
         <Text
           asChild
           className={
-            clsx('cursor-pointer', {
+            clsx('cursor-pointer text-gray-100', {
               'text-gray-400': props.disabled,
               'cursor-not-allowed': props.disabled,
             }

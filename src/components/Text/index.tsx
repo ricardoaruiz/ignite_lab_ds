@@ -15,7 +15,7 @@ const sizes = {
   lg: 'text-md',
 }
 
-export const Text = ({ children, className, size = 'md', asChild }: TextProps) => {
+export const Text = ({ children, size = 'md', asChild, className }: TextProps) => {
 
   const Component = asChild ? Slot : 'span'
 

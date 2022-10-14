@@ -3,10 +3,11 @@ import { Slot } from '@radix-ui/react-slot'
 import { clsx } from 'clsx'
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  asChild?: boolean
+  asChild?: boolean;
+  className?: string;
 }
 
-export const Button = ({ children, asChild, ...props }: ButtonProps) => {
+export const Button = ({ children, asChild, className, ...props }: ButtonProps) => {
 
   const Component = asChild ? Slot : 'button'
 
@@ -36,7 +37,7 @@ export const Button = ({ children, asChild, ...props }: ButtonProps) => {
   return (
     <Component
       {...props}
-      className={clsx(defaultClasses, focusedClasses, disabledClasses)}
+      className={clsx(defaultClasses, focusedClasses, disabledClasses, className)}
     >
       {children}
     </Component>

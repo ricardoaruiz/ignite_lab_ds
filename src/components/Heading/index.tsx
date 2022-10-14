@@ -5,6 +5,7 @@ import { Slot } from '@radix-ui/react-slot'
 export type HeadingProps = React.PropsWithChildren & {
   size?: 'sm' | 'md' | 'lg',
   asChild?: boolean
+  className?: string
 }
 
 const sizes = {
@@ -13,7 +14,7 @@ const sizes = {
   lg: 'text-2xl'
 }
 
-export const Heading = ({ children, size = 'md', asChild = false }: HeadingProps) => {
+export const Heading = ({ children, size = 'md', asChild = false, className }: HeadingProps) => {
 
   const Component = asChild ? Slot : 'h2'
 
@@ -26,6 +27,6 @@ export const Heading = ({ children, size = 'md', asChild = false }: HeadingProps
   const sizeClasses = React.useMemo(() => sizes[size], [size])
 
   return (
-    <Component className={clsx(defaultClasses, sizeClasses)}>{children}</Component>
+    <Component className={clsx(defaultClasses, sizeClasses, className)}>{children}</Component>
   )
 }
